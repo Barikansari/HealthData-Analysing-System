@@ -1,0 +1,10 @@
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\bin\Debug\HealthData-Analysing-System.exe.config
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\bin\Debug\HealthData-Analysing-System.exe
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\bin\Debug\HealthData-Analysing-System.pdb
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\obj\Debug\HealthData-Analysing-System.csprojAssemblyReference.cache
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\obj\Debug\HealthData_Analysing_System.Form1.resources
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\obj\Debug\HealthData_Analysing_System.Properties.Resources.resources
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\obj\Debug\HealthData-Analysing-System.csproj.GenerateResource.cache
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\obj\Debug\HealthData-Analysing-System.csproj.CoreCompileInputs.cache
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\obj\Debug\HealthData-Analysing-System.exe
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\obj\Debug\HealthData-Analysing-System.pdb

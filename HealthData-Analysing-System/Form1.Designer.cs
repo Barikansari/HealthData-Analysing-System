@@ -28,62 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.readToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.lblWeight = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblLength = new System.Windows.Forms.Label();
+            this.lblSMode = new System.Windows.Forms.Label();
+            this.lblMonitor = new System.Windows.Forms.Label();
+            this.lblInterval = new System.Windows.Forms.Label();
+            this.lblStartTime = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip2
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.readToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(912, 24);
+            this.menuStrip2.TabIndex = 0;
+            this.menuStrip2.Text = "menuStrip2";
             // 
-            // fileToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openFileToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
+            this.toolStripMenuItem1.Text = "File";
             // 
-            // readToolStripMenuItem
+            // toolStripMenuItem3
             // 
-            this.readToolStripMenuItem.Name = "readToolStripMenuItem";
-            this.readToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.readToolStripMenuItem.Text = "Read";
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(122, 22);
+            this.toolStripMenuItem3.Text = "Open file";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // openFileToolStripMenuItem
+            // openFileDialog2
             // 
-            this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openFileToolStripMenuItem.Text = "Open File";
-            this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
+            this.openFileDialog2.FileName = "openFileDialog2";
             // 
-            // openFileDialog1
+            // lblWeight
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.lblWeight.AutoSize = true;
+            this.lblWeight.Location = new System.Drawing.Point(766, 34);
+            this.lblWeight.Name = "lblWeight";
+            this.lblWeight.Size = new System.Drawing.Size(41, 13);
+            this.lblWeight.TabIndex = 13;
+            this.lblWeight.Text = "Weight";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(517, 34);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(30, 13);
+            this.lblDate.TabIndex = 12;
+            this.lblDate.Text = "Date";
+            // 
+            // lblLength
+            // 
+            this.lblLength.AutoSize = true;
+            this.lblLength.Location = new System.Drawing.Point(641, 34);
+            this.lblLength.Name = "lblLength";
+            this.lblLength.Size = new System.Drawing.Size(40, 13);
+            this.lblLength.TabIndex = 10;
+            this.lblLength.Text = "Length";
+            // 
+            // lblSMode
+            // 
+            this.lblSMode.AutoSize = true;
+            this.lblSMode.Location = new System.Drawing.Point(410, 34);
+            this.lblSMode.Name = "lblSMode";
+            this.lblSMode.Size = new System.Drawing.Size(41, 13);
+            this.lblSMode.TabIndex = 11;
+            this.lblSMode.Text = "SMode";
+            // 
+            // lblMonitor
+            // 
+            this.lblMonitor.AutoSize = true;
+            this.lblMonitor.Location = new System.Drawing.Point(280, 34);
+            this.lblMonitor.Name = "lblMonitor";
+            this.lblMonitor.Size = new System.Drawing.Size(42, 13);
+            this.lblMonitor.TabIndex = 9;
+            this.lblMonitor.Text = "Monitor";
+            // 
+            // lblInterval
+            // 
+            this.lblInterval.AutoSize = true;
+            this.lblInterval.Location = new System.Drawing.Point(153, 34);
+            this.lblInterval.Name = "lblInterval";
+            this.lblInterval.Size = new System.Drawing.Size(42, 13);
+            this.lblInterval.TabIndex = 8;
+            this.lblInterval.Text = "Interval";
+            // 
+            // lblStartTime
+            // 
+            this.lblStartTime.AutoSize = true;
+            this.lblStartTime.Location = new System.Drawing.Point(30, 34);
+            this.lblStartTime.Name = "lblStartTime";
+            this.lblStartTime.Size = new System.Drawing.Size(55, 13);
+            this.lblStartTime.TabIndex = 7;
+            this.lblStartTime.Text = "Start Time";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(33, 85);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(514, 317);
+            this.dataGridView2.TabIndex = 14;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(912, 427);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.lblWeight);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblLength);
+            this.Controls.Add(this.lblSMode);
+            this.Controls.Add(this.lblMonitor);
+            this.Controls.Add(this.lblInterval);
+            this.Controls.Add(this.lblStartTime);
+            this.Controls.Add(this.menuStrip2);
+            this.MainMenuStrip = this.menuStrip2;
             this.Name = "Form1";
-            this.Text = "Health";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,6 +174,19 @@
         private System.Windows.Forms.ToolStripMenuItem readToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openFileToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.Label lblWeight;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblLength;
+        private System.Windows.Forms.Label lblSMode;
+        private System.Windows.Forms.Label lblMonitor;
+        private System.Windows.Forms.Label lblInterval;
+        private System.Windows.Forms.Label lblStartTime;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 

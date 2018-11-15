@@ -108,23 +108,23 @@ namespace HealthData_Analysing_System
                 _hrData.Add("heartRate", heartRate);
                 _hrData.Add("watt", watt);
 
-                //string totalDistanceCovered = Summary.FindSum(_hrData["cadence"]).ToString();
-                //string averageSpeed = Summary.FindAverage(_hrData["cadence"]).ToString();
-                //string maxSpeed = Summary.FindMax(_hrData["cadence"]).ToString();
+                string totalDistanceCovered = Summary.FindSum(_hrData["cadence"]).ToString();
+                string averageSpeed = Summary.FindAverage(_hrData["cadence"]).ToString();
+                string maxSpeed = Summary.FindMax(_hrData["cadence"]).ToString();
 
-                //string averageHeartRate = Summary.FindAverage(_hrData["heartRate"]).ToString();
-                //string maximumHeartRate = Summary.FindMax(_hrData["heartRate"]).ToString();
-                //string minHeartRate = Summary.FindMin(_hrData["heartRate"]).ToString();
+                string averageHeartRate = Summary.FindAverage(_hrData["heartRate"]).ToString();
+                string maximumHeartRate = Summary.FindMax(_hrData["heartRate"]).ToString();
+                string minHeartRate = Summary.FindMin(_hrData["heartRate"]).ToString();
 
-                //string averagePower = Summary.FindAverage(_hrData["watt"]).ToString();
-                //string maxPower = Summary.FindMax(_hrData["watt"]).ToString();
+                string averagePower = Summary.FindAverage(_hrData["watt"]).ToString();
+                string maxPower = Summary.FindMax(_hrData["watt"]).ToString();
 
-                //string averageAltitude = Summary.FindAverage(_hrData["altitude"]).ToString();
-                //string maximumAltitude = Summary.FindAverage(_hrData["altitude"]).ToString();
+                string averageAltitude = Summary.FindAverage(_hrData["altitude"]).ToString();
+                string maximumAltitude = Summary.FindAverage(_hrData["altitude"]).ToString();
 
-                //string[] summarydata = new string[] { totalDistanceCovered, averageSpeed, maxSpeed, averageHeartRate, maximumHeartRate, minHeartRate, averagePower, maxPower, averageAltitude, maximumAltitude };
-                //dataGridView2.Rows.Clear();
-                //dataGridView2.Rows.Add(summarydata);
+                string[] summarydata = new string[] { totalDistanceCovered, averageSpeed, maxSpeed, averageHeartRate, maximumHeartRate, minHeartRate, averagePower, maxPower, averageAltitude, maximumAltitude };
+                dataGridView3.Rows.Clear();
+                dataGridView3.Rows.Add(summarydata);
             }
         }
 
@@ -136,17 +136,27 @@ namespace HealthData_Analysing_System
             dataGridView2.Columns[2].Name = "Heart rate";
             dataGridView2.Columns[3].Name = "Power in watts";
 
-            //dataGridView2.ColumnCount = 10;
-            //dataGridView2.Columns[0].Name = "Total distance covered";
-            //dataGridView2.Columns[1].Name = "Average speed";
-            //dataGridView2.Columns[2].Name = "Maximum speed";
-            //dataGridView2.Columns[3].Name = "Average heart rate";
-            //dataGridView2.Columns[4].Name = "Maximum heart rate";
-            //dataGridView2.Columns[5].Name = "Minimum heart rate";
-            //dataGridView2.Columns[6].Name = "Average power";
-            //dataGridView2.Columns[7].Name = "Maximum power";
-            //dataGridView2.Columns[8].Name = "Average altitude";
-            //dataGridView2.Columns[9].Name = "Maximum altitude";
+            dataGridView3.ColumnCount = 10;
+            dataGridView3.Columns[0].Name = "Total distance covered";
+            dataGridView3.Columns[1].Name = "Average speed";
+            dataGridView3.Columns[2].Name = "Maximum speed";
+            dataGridView3.Columns[3].Name = "Average heart rate";
+            dataGridView3.Columns[4].Name = "Maximum heart rate";
+            dataGridView3.Columns[5].Name = "Minimum heart rate";
+            dataGridView3.Columns[6].Name = "Average power";
+            dataGridView3.Columns[7].Name = "Maximum power";
+            dataGridView3.Columns[8].Name = "Average altitude";
+            dataGridView3.Columns[9].Name = "Maximum altitude";
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 

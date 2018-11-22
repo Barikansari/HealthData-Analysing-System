@@ -34,23 +34,27 @@ namespace HealthData_Analysing_System
 
         public static double FindAverage(List<string> value)
         {
-            double average = 0;
+            
+            int average = 0;
 
             foreach (var data in value)
             {
-                average += average + Convert.ToDouble(data);
+               
+                average += Convert.ToInt16(data);
             }
 
+           
             return average / value.Count;
-        }
 
+        }
+        
         public static int FindSum(List<string> list)
         {
             int sum = 0;
 
             foreach (var data in list)
             {
-                sum += sum + Convert.ToInt16(data);
+                sum += Convert.ToInt16(data);
             }
 
             return sum;

@@ -29,7 +29,7 @@ namespace HealthData_Analysing_System
             GraphPane powerpanel = zedGraphControl4.GraphPane;
 
 
-            // Set the Titles
+            // Seting the Titles for graph
             speedpanel1.Title.Text = "Overview";
             speedpanel1.XAxis.Title.Text = "Time in second";
             speedpanel1.YAxis.Title.Text = "Data";

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace HealthData_Analysing_System
         {
             InitializeComponent();
             InitGrid();
+            this.CenterToScreen();
         }
 
         private string[] SplitString(string text)
@@ -70,13 +72,14 @@ namespace HealthData_Analysing_System
                         _param.Add(parts[0], parts[1]);
                     }
                 }
-
+                DateTime date1 = new DateTime(Convert.ToInt64(_param["Date"]));
+                CultureInfo ci = CultureInfo.InvariantCulture;
 
                 lblStartTime.Text = "Start Time" + "= " + _param["StartTime"];
                 lblInterval.Text = "Interval" + "= " + _param["Interval"];
                 lblMonitor.Text = "Monitor" + "= " + _param["Monitor"];
                 lblSMode.Text = "SMode" + "= " + _param["SMode"];
-                lblDate.Text = "Date" + "= " + _param["Date"];
+                lblDate.Text = "Date" + "= " + date1.ToString("yyyy-mm-dd", ci);
                 lblLength.Text = "Length" + "= " + _param["Length"];
                 lblWeight.Text = "Weight" + "= " + _param["Weight"];
 
@@ -163,7 +166,7 @@ namespace HealthData_Analysing_System
         {
             if (_hrData.Count < 1)
             {
-                MessageBox.Show("Please select a file first");
+                MessageBox.Show("Must select a file first");
             }
             else
             {
@@ -176,7 +179,7 @@ namespace HealthData_Analysing_System
         {
             if (_hrData.Count < 1)
             {
-                MessageBox.Show("Please select a file first");
+                MessageBox.Show("Must select a file first");
             }
             else
             {

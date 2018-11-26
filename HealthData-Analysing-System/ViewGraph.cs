@@ -20,6 +20,7 @@ namespace HealthData_Analysing_System
         public ViewGraph()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void ViewGraph_Load(object sender, EventArgs e)

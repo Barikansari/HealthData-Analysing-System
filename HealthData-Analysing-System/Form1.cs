@@ -161,8 +161,28 @@ namespace HealthData_Analysing_System
 
         private void viewGraphToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ViewGraph._hrData = _hrData;
-            new ViewGraph().Show();
+            if (_hrData.Count < 1)
+            {
+                MessageBox.Show("Please select a file first");
+            }
+            else
+            {
+                ViewGraph._hrData = _hrData;
+                new ViewGraph().Show();
+            }
+        }
+
+        private void showGraphToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_hrData.Count < 1)
+            {
+                MessageBox.Show("Please select a file first");
+            }
+            else
+            {
+                IndividualGraph._hrData = _hrData;
+                new IndividualGraph().Show();
+            }
         }
     }
 

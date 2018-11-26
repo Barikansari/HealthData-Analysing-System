@@ -43,6 +43,8 @@
             this.lblStartTime = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.individualGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -52,7 +54,8 @@
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
-            this.graphToolStripMenuItem});
+            this.graphToolStripMenuItem,
+            this.individualGraphToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(912, 24);
@@ -85,7 +88,7 @@
             // viewGraphToolStripMenuItem
             // 
             this.viewGraphToolStripMenuItem.Name = "viewGraphToolStripMenuItem";
-            this.viewGraphToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.viewGraphToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewGraphToolStripMenuItem.Text = "View Graph";
             this.viewGraphToolStripMenuItem.Click += new System.EventHandler(this.viewGraphToolStripMenuItem_Click);
             // 
@@ -174,6 +177,21 @@
             this.dataGridView3.TabIndex = 15;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
+            // individualGraphToolStripMenuItem
+            // 
+            this.individualGraphToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showGraphToolStripMenuItem});
+            this.individualGraphToolStripMenuItem.Name = "individualGraphToolStripMenuItem";
+            this.individualGraphToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.individualGraphToolStripMenuItem.Text = "IndividualGraph";
+            // 
+            // showGraphToolStripMenuItem
+            // 
+            this.showGraphToolStripMenuItem.Name = "showGraphToolStripMenuItem";
+            this.showGraphToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.showGraphToolStripMenuItem.Text = "ShowGraph";
+            this.showGraphToolStripMenuItem.Click += new System.EventHandler(this.showGraphToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(912, 655);
@@ -222,6 +240,8 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.ToolStripMenuItem graphToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewGraphToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem individualGraphToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showGraphToolStripMenuItem;
     }
 }
 

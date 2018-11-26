@@ -25,6 +25,7 @@ namespace HealthData_Analysing_System
         private void ViewGraph_Load(object sender, EventArgs e)
         {
             plotGraph();
+            SetSize();
 
 
         }
@@ -46,6 +47,47 @@ namespace HealthData_Analysing_System
             PointPairList altitudePairList = new PointPairList();
             PointPairList heartPairList = new PointPairList();
             PointPairList powerPairList = new PointPairList();
+
+            for (int i = 0; i < _hrData["cadence"].Count; i++)
+            {
+                cadencePairList.Add(i, Convert.ToInt16(_hrData["cadence"][i]));
+            }
+
+            for (int i = 0; i < _hrData["altitude"].Count; i++)
+            {
+                altitudePairList.Add(i, Convert.ToInt16(_hrData["altitude"][i]));
+            }
+
+            for (int i = 0; i < _hrData["heartRate"].Count; i++)
+            {
+                heartPairList.Add(i, Convert.ToInt16(_hrData["heartRate"][i]));
+            }
+
+            for (int i = 0; i < _hrData["watt"].Count; i++)
+            {
+                powerPairList.Add(i, Convert.ToInt16(_hrData["watt"][i]));
+            }
+
+            LineItem cadence = panel1.AddCurve("Cadence",
+                   cadencePairList, Color.Red, SymbolType.None);
+
+            LineItem altitude = panel1.AddCurve("Altitude",
+                  altitudePairList, Color.Blue, SymbolType.None);
+
+            LineItem heart = panel1.AddCurve("Heart",
+                   heartPairList, Color.Black, SymbolType.None);
+
+            LineItem power = panel1.AddCurve("Power",
+                  powerPairList, Color.Orange, SymbolType.None);
+
+            zedGraphControl1.AxisChange();
+        }
+
+        private void SetSize()
+        {
+            zedGraphControl1.Location = new Point(0, 0);
+            zedGraphControl1.IsShowPointValues = true;
+            zedGraphControl1.Size = new Size(this.ClientRectangle.Width - 20, this.ClientRectangle.Height - 50);
 
         }
 

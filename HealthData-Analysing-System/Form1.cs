@@ -158,6 +158,12 @@ namespace HealthData_Analysing_System
         {
 
         }
+
+        private void viewGraphToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewGraph._hrData = _hrData;
+            new ViewGraph().Show();
+        }
     }
 
 }

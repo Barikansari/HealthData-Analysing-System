@@ -41,6 +41,8 @@
             this.lblStartTime = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.graphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -49,7 +51,8 @@
             // menuStrip2
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.graphToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(912, 24);
@@ -67,7 +70,7 @@
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(122, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem3.Text = "Open file";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
@@ -156,6 +159,21 @@
             this.dataGridView3.TabIndex = 15;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
+            // graphToolStripMenuItem
+            // 
+            this.graphToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewGraphToolStripMenuItem});
+            this.graphToolStripMenuItem.Name = "graphToolStripMenuItem";
+            this.graphToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.graphToolStripMenuItem.Text = "Graph";
+            // 
+            // viewGraphToolStripMenuItem
+            // 
+            this.viewGraphToolStripMenuItem.Name = "viewGraphToolStripMenuItem";
+            this.viewGraphToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewGraphToolStripMenuItem.Text = "View Graph";
+            this.viewGraphToolStripMenuItem.Click += new System.EventHandler(this.viewGraphToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(912, 655);
@@ -202,6 +220,8 @@
         private System.Windows.Forms.Label lblStartTime;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.ToolStripMenuItem graphToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewGraphToolStripMenuItem;
     }
 }
 

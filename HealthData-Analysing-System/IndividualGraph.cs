@@ -178,5 +178,10 @@ namespace HealthData_Analysing_System
             zedGraphControl4.Visible = false;
             zedGraphControl5.Visible = true;
         }
+
+        private void IndividualGraph_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -177,7 +177,8 @@ namespace HealthData_Analysing_System
                 string averageAltitude = Summary.FindAverage(_hrData["altitude"]).ToString();
                 string maximumAltitude = Summary.FindAverage(_hrData["altitude"]).ToString();
 
-                string[] summarydata = new string[] { totalDistanceCovered, averageSpeed, maxSpeed, averageHeartRate, maximumHeartRate, minHeartRate, averagePower, maxPower, averageAltitude, maximumAltitude };
+                string[] summarydata = new string[] { totalDistanceCovered, averageSpeed, maxSpeed, averageHeartRate, maximumHeartRate,
+                    minHeartRate, averagePower, maxPower, averageAltitude, maximumAltitude };
                 dataGridView3.Rows.Clear();
                 dataGridView3.Rows.Add(summarydata);
             }
@@ -282,7 +283,8 @@ namespace HealthData_Analysing_System
                     dataGridView2.Rows.Clear();
                     for (int i = 0; i < _hrData["cadence"].Count; i++)
                     {
-                        string[] hrData = new string[] { _hrData["cadence"][i], _hrData["altitude"][i], _hrData["heartRate"][i], _hrData["watt"][i], _hrData["speed"][i] };
+                        string[] hrData = new string[] { _hrData["cadence"][i], _hrData["altitude"][i], _hrData["heartRate"][i],
+                            _hrData["watt"][i], _hrData["speed"][i] };
                         dataGridView2.Rows.Add(hrData);
                     }
                 }
@@ -299,12 +301,10 @@ namespace HealthData_Analysing_System
                         dataGridView2.Rows.Clear();
                     DateTime dateTime = DateTime.Parse(_param["StartTime"]);
                     for (int i = 0; i < _hrData["cadence"].Count; i++)
-
                         {
-                        // string[] hrData = new string[] { _hrData["cadence"][i], _hrData["altitude"][i], _hrData["heartRate"][i], _hrData["watt"][i], _hrData["speed"][i] };
-                        if (i > 0) dateTime = dateTime.AddSeconds(Convert.ToInt32(_param["Interval"]));
-                        string[] hrData = new string[] { _hrData["cadence"][i], _hrData["altitude"][i], _hrData["heartRate"][i], _hrData["watt"][i], _hrData["speed"][i], dateTime.TimeOfDay.ToString() };
-
+                       if (i > 0) dateTime = dateTime.AddSeconds(Convert.ToInt32(_param["Interval"]));
+                        string[] hrData = new string[] { _hrData["cadence"][i], _hrData["altitude"][i], _hrData["heartRate"][i],
+                            _hrData["watt"][i], _hrData["speed"][i], dateTime.TimeOfDay.ToString() };
                         dataGridView2.Rows.Add(hrData);
                         }
                     }
@@ -324,5 +324,8 @@ namespace HealthData_Analysing_System
             CalculateSpeed("km");
         }
 
-        
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new FileCompare().Show();
+        }
     } }

@@ -28,3 +28,4 @@ C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analys
 C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\bin\Debug\zh-tw\ZedGraph.resources.dll
 C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\obj\Debug\HealthData-Analysing-System.csproj.CopyComplete
 C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\obj\Debug\HealthData_Analysing_System.IndividualGraph.resources
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-System\obj\Debug\HealthData_Analysing_System.FileCompare.resources

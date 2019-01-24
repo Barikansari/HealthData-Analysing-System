@@ -10,7 +10,7 @@ namespace HealthData_Analysing_System.Action
 {
     class TableFiller
     {
-        public string[] FillDataInSumaryTable(Dictionary<string, object> _hrData, Dictionary<string, string> _param, string endTime)
+        public string[] FillDataInSumaryTable(Dictionary<string, object> _hrData, string endTime, Dictionary<string, string> _param = null)
         {
             double startDate = TimeSpan.Parse(_param["StartTime"]).TotalSeconds;
             double endDate = TimeSpan.Parse(endTime).TotalSeconds;

@@ -49,6 +49,8 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -89,11 +91,12 @@
             this.graphToolStripMenuItem.Name = "graphToolStripMenuItem";
             this.graphToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.graphToolStripMenuItem.Text = "Graph";
+            this.graphToolStripMenuItem.Click += new System.EventHandler(this.graphToolStripMenuItem_Click);
             // 
             // viewGraphToolStripMenuItem
             // 
             this.viewGraphToolStripMenuItem.Name = "viewGraphToolStripMenuItem";
-            this.viewGraphToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.viewGraphToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewGraphToolStripMenuItem.Text = "View Graph";
             this.viewGraphToolStripMenuItem.Click += new System.EventHandler(this.viewGraphToolStripMenuItem_Click);
             // 
@@ -230,9 +233,31 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(687, 160);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 20;
+            this.button8.Text = "Reset Selection";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(675, 199);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(106, 23);
+            this.button7.TabIndex = 19;
+            this.button7.Text = "Selection Result";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(912, 655);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
@@ -285,6 +310,8 @@
         private System.Windows.Forms.ToolStripMenuItem perMileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem perKmToolStripMenuItem;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
     }
 }
 

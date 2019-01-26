@@ -22,7 +22,7 @@ namespace HealthData_Analysing_System
         private string endTime;
         private List<int> smode = new List<int>();
         private FileConvertor c = new FileConvertor();
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -241,29 +241,34 @@ namespace HealthData_Analysing_System
         List<string> listTime = new List<string>();
         private void dataGridView2_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
-            if (e.StateChanged != DataGridViewElementStates.Selected) return;
-            int index = Convert.ToInt32(e.Row.Index.ToString());
+            try
+            {
+                if (e.StateChanged != DataGridViewElementStates.Selected) return;
+                int index = Convert.ToInt32(e.Row.Index.ToString());
 
-            string cadence = dataGridView2.Rows[index].Cells[0].Value.ToString();
-            listCadence.Add(cadence);
+                //_hrData.Add("cadence", new List());
+                string cadence = dataGridView2.Rows[index].Cells[0].Value.ToString();
+                listCadence.Add(cadence);
 
-            //_hrData.Add("cadence", new List());
-            string altitude = dataGridView2.Rows[index].Cells[1].Value.ToString();
-            listAltitude.Add(altitude);
+                string altitude = dataGridView2.Rows[index].Cells[1].Value.ToString();
+                listAltitude.Add(altitude);
 
-            string heartRate = dataGridView2.Rows[index].Cells[2].Value.ToString();
-            listHeartRate.Add(heartRate);
+                string heartRate = dataGridView2.Rows[index].Cells[2].Value.ToString();
+                listHeartRate.Add(heartRate);
 
-            string power = dataGridView2.Rows[index].Cells[3].Value.ToString();
-            listPower.Add(power);
+                string power = dataGridView2.Rows[index].Cells[3].Value.ToString();
+                listPower.Add(power);
 
-            string speed = dataGridView2.Rows[index].Cells[4].Value.ToString();
-            listSpeed.Add(speed);
+                string speed = dataGridView2.Rows[index].Cells[4].Value.ToString();
+                listSpeed.Add(speed);
 
-            string time = dataGridView2.Rows[index].Cells[5].Value.ToString();
-            listTime.Add(time);
-
-            Console.WriteLine(cadence + "/" + altitude + "/" + heartRate + "/" + power + "/" + speed + "/" + time);
+                string time = dataGridView2.Rows[index].Cells[5].Value.ToString();
+                listTime.Add(time);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -273,20 +278,36 @@ namespace HealthData_Analysing_System
 
         private void button7_Click(object sender, EventArgs e)
         {
-            data.Add("cadence", listCadence);
-            data.Add("altitude", listAltitude);
-            data.Add("heartRate", listHeartRate);
-            data.Add("watt", listPower);
-            data.Add("speed", listSpeed);
-            data.Add("time", listTime);
+            try
+            {
+                data.Add("cadence", listCadence);
+                data.Add("altitude", listAltitude);
+                data.Add("heartRate", listHeartRate);
+                data.Add("watt", listPower);
+                data.Add("speed", listSpeed);
+                data.Add("time", listTime);
 
-            var endTime = data["time"] as List<string>;
-            int count = endTime.Count();
-            Dictionary<string, string> _param = new Dictionary<string, string>();
-            _param.Add("StartTime", endTime[0]);
+                var endTime = data["time"] as List<string>;
+                int count = endTime.Count();
+                Dictionary<string, string> _param = new Dictionary<string, string>();
+                _param.Add("StartTime", endTime[0]);
 
-            dataGridView3.Rows.Clear();
-            dataGridView3.Rows.Add(new TableFiller().FillDataInSumaryTable(data, endTime[count - 1], _param));
+                dataGridView3.Rows.Clear();
+                dataGridView3.Rows.Add(new TableFiller().FillDataInSumaryTable(data, endTime[count - 1], _param));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please click on reset button first");
+            }
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     } }

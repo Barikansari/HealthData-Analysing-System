@@ -308,6 +308,8 @@ namespace HealthData_Analysing_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var data = _hrData.ToDictionary(k => k.Key, k => k.Value as object);
+            new IntervalDetectionForm(data).Show();
 
         }
     } }

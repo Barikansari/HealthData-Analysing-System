@@ -66,6 +66,15 @@ namespace HealthData_Analysing_System
 
                 // calculation for smode
                 var param = hrData["params"] as Dictionary<string, string>;
+                //header file
+                lblStartTime.Text = lblStartTime.Text + "= " + param["StartTime"];
+                lblInterval.Text = lblInterval.Text + "= " + param["Interval"];
+                lblMonitor.Text = lblMonitor.Text + "= " + param["Monitor"];
+                lblSMode.Text = lblSMode.Text + "= " + param["SMode"];
+                lblDate.Text = lblDate.Text + "= " + param["Date"];
+                lblLength.Text = lblLength.Text + "= " + param["Length"];
+                lblWeight.Text = lblWeight.Text + "= " + param["Weight"];
+
                 var sMode = param["SMode"];
                 for (int i = 0; i < sMode.Length; i++)
                 {
@@ -286,12 +295,6 @@ namespace HealthData_Analysing_System
                 Console.WriteLine(ex.Message);
             }
         }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            data.Clear();
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
             try
@@ -317,6 +320,11 @@ namespace HealthData_Analysing_System
             }
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            data.Clear();
+        }
+
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
@@ -327,5 +335,110 @@ namespace HealthData_Analysing_System
             var data = _hrData.ToDictionary(k => k.Key, k => k.Value as object);
             new IntervalDetectionForm(data).Show();
 
+        }
+
+       
+
+        
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        Dictionary<string, object> list = new Dictionary<string, object>();
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string val = textBox1.Text;
+            int value;
+            if (int.TryParse(val, out value))
+            {
+                int count = 0;
+                try
+                {
+                    count = ((List<string>)data["speed"]).Count;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Please select a row first");
+                }
+
+                int portion = count / Convert.ToInt32(val);
+
+                var cadenceData = data["cadence"] as List<string>;
+                var altitudeData = data["altitude"] as List<string>;
+                var heartRateData = data["heartRate"] as List<string>;
+                var wattData = data["watt"] as List<string>;
+                var speedData = data["speed"] as List<string>;
+
+                var newCadenceData = new List<string>();
+                var newAltitudeData = new List<string>();
+                var newHeartRateData = new List<string>();
+                var newWattData = new List<string>();
+                var newSpeedData = new List<string>();
+
+                int num = 0;
+                int portionNumber = 0;
+
+                for (int i = 0; i < count; i++)
+                {
+                    num++;
+                    newCadenceData.Add(cadenceData[i]);
+                    newAltitudeData.Add(altitudeData[i]);
+                    newHeartRateData.Add(heartRateData[i]);
+                    newWattData.Add(wattData[i]);
+                    newSpeedData.Add(speedData[i]);
+
+                    if (num == portion)
+                    {
+                        num = 0;
+                        portionNumber++;
+
+                        var listData = new Dictionary<string, List<string>>();
+                        listData.Add("cadence", newCadenceData);
+                        listData.Add("altitude", newAltitudeData);
+                        listData.Add("heartRate", newHeartRateData);
+                        listData.Add("watt", newWattData);
+                        listData.Add("speed", newSpeedData);
+
+                        list.Add("data" + portionNumber, listData);
+
+                        newCadenceData = new List<string>();
+                        newAltitudeData = new List<string>();
+                        newHeartRateData = new List<string>();
+                        newWattData = new List<string>();
+                        newSpeedData = new List<string>();
+                    }
+
+                }
+
+                comboBox1.Items.Clear();
+                for (int i = 0; i < list.Count; i++)
+                {
+                    comboBox1.Items.Add("Portion " + (i + 1));
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid number between 0 - 9");
+            }
+
+        }
+
+    
+
+    private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectedIndex = comboBox1.SelectedIndex + 1;
+
+            dataGridView3.Rows.Clear();
+
+            var a = list["data" + selectedIndex] as Dictionary<string, List<string>>;
+            var b = a.ToDictionary(k => k.Key, k => k.Value as object);
+
+
+            var data = new TableFiller().FillDataInSumaryTable(b, "19:12:15", null);
+            dataGridView3.Rows.Add(data);
         }
     } }

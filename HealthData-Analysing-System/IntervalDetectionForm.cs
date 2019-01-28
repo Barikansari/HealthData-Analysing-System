@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HealthData_Analysing_System.Action;
 
 namespace HealthData_Analysing_System
 {

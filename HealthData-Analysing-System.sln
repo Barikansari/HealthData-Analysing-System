@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthData-Analysing-System", "HealthData-Analysing-System\HealthData-Analysing-System.csproj", "{ECB50EB9-82DC-4249-9044-2DD5F6F3FA45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthData-Analysing-SystemTests", "HealthData-Analysing-SystemTests\HealthData-Analysing-SystemTests.csproj", "{0E7D67F2-9317-405B-AB4E-A91B16E0A10B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{ECB50EB9-82DC-4249-9044-2DD5F6F3FA45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECB50EB9-82DC-4249-9044-2DD5F6F3FA45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECB50EB9-82DC-4249-9044-2DD5F6F3FA45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7D67F2-9317-405B-AB4E-A91B16E0A10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7D67F2-9317-405B-AB4E-A91B16E0A10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7D67F2-9317-405B-AB4E-A91B16E0A10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7D67F2-9317-405B-AB4E-A91B16E0A10B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

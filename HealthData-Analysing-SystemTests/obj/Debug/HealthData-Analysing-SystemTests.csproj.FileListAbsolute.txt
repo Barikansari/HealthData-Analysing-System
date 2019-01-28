@@ -1,0 +1,2 @@
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-SystemTests\obj\Debug\HealthData-Analysing-SystemTests.csprojAssemblyReference.cache
+C:\Users\Salma Ansari\source\repos\HealthData-Analysing-System\HealthData-Analysing-SystemTests\obj\Debug\HealthData-Analysing-SystemTests.csproj.CoreCompileInputs.cache

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HealthData_Analysing_System.Action
 {
-    class FileConvertor
+    public class FileConvertor
     {
         public string[] SplitString(string text)
         {

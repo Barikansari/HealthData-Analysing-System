@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HealthData_Analysing_System
 {
-    class Summary
+   public class Summary
     {
         public static int FindMax(List<string> value)
         {
@@ -58,6 +58,32 @@ namespace HealthData_Analysing_System
             }
 
             return sum;
+        }
+
+        public static string ConvertToDate(string date)
+        {
+            string year = "";
+            string month = "";
+            string day = "";
+
+            for (int i = 0; i < 4; i++)
+            {
+                year = year + date[i];
+            };
+
+            for (int i = 4; i < 6; i++)
+            {
+                month = month + date[i];
+            };
+
+            for (int i = 6; i < 8; i++)
+            {
+                day = day + date[i];
+            };
+
+            string convertedDate = year + "-" + month + "-" + day;
+
+            return convertedDate;
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace HealthData_Analysing_System.Action
 {
-    class TableFiller
+    public class TableFiller
     {
         public string[] FillDataInSumaryTable(Dictionary<string, object> _hrData, string endTime, Dictionary<string, string> _param = null)
         {

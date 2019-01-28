@@ -83,7 +83,7 @@ namespace HealthData_Analysing_System
             }
         }
 
-        private string ConvertToDate(string date)
+      /*  private string ConvertToDate(string date)
         {
             string year = "";
             string month = "";
@@ -103,7 +103,7 @@ namespace HealthData_Analysing_System
             string convertedDate = year + "-" + month + "-" + day;
             return convertedDate;
         }
-
+        */
         private void InitGrid()
         {
             dataGridView2.ColumnCount = 6;

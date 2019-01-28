@@ -59,5 +59,15 @@ namespace HealthData_Analysing_System
             dataGridView2.Rows.Add(data);
 
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void IntervalDetectionForm_Load_1(object sender, EventArgs e)
+        {
+            InitGrid();
+        }
     }
 }

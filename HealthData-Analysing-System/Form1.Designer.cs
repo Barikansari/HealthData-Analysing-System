@@ -218,11 +218,12 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(33, 85);
+            this.dataGridView2.Location = new System.Drawing.Point(332, 76);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(610, 317);
             this.dataGridView2.TabIndex = 14;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridView2_RowStateChanged_1);
             // 
             // dataGridView3
             // 
@@ -235,7 +236,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(662, 105);
+            this.button6.Location = new System.Drawing.Point(33, 111);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(130, 23);
             this.button6.TabIndex = 17;
@@ -245,7 +246,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(687, 160);
+            this.button8.Location = new System.Drawing.Point(40, 154);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 20;
@@ -255,7 +256,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(675, 199);
+            this.button7.Location = new System.Drawing.Point(33, 196);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(106, 23);
             this.button7.TabIndex = 19;
@@ -282,7 +283,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(664, 268);
+            this.button1.Location = new System.Drawing.Point(33, 269);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 23);
             this.button1.TabIndex = 50;
@@ -329,7 +330,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(787, 226);
+            this.comboBox1.Location = new System.Drawing.Point(156, 225);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(115, 21);
             this.comboBox1.TabIndex = 57;
@@ -337,7 +338,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(908, 199);
+            this.button10.Location = new System.Drawing.Point(277, 198);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(34, 23);
             this.button10.TabIndex = 56;
@@ -347,7 +348,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(787, 199);
+            this.textBox1.Location = new System.Drawing.Point(156, 198);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(115, 20);
             this.textBox1.TabIndex = 55;

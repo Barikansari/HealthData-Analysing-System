@@ -59,16 +59,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-88, 43);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 42);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(559, 304);
+            this.dataGridView1.Size = new System.Drawing.Size(525, 304);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button3.Location = new System.Drawing.Point(570, 17);
+            this.button3.Location = new System.Drawing.Point(815, 17);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 12;
@@ -78,7 +78,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(453, 17);
+            this.button2.Location = new System.Drawing.Point(681, 16);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 11;
@@ -88,7 +88,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(142, 14);
+            this.button1.Location = new System.Drawing.Point(318, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
@@ -98,14 +98,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(223, 17);
+            this.textBox2.Location = new System.Drawing.Point(432, 16);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(224, 20);
             this.textBox2.TabIndex = 9;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(-88, 16);
+            this.textBox1.Location = new System.Drawing.Point(75, 17);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(224, 20);
             this.textBox1.TabIndex = 8;
@@ -121,25 +121,25 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(-88, 353);
+            this.dataGridView3.Location = new System.Drawing.Point(21, 352);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(1205, 125);
+            this.dataGridView3.Size = new System.Drawing.Size(1096, 125);
             this.dataGridView3.TabIndex = 15;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(495, 43);
+            this.dataGridView2.Location = new System.Drawing.Point(552, 43);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(622, 304);
+            this.dataGridView2.Size = new System.Drawing.Size(565, 304);
             this.dataGridView2.TabIndex = 14;
             // 
             // FileCompare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 492);
+            this.ClientSize = new System.Drawing.Size(1197, 492);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -150,6 +150,7 @@
             this.Controls.Add(this.dataGridView2);
             this.Name = "FileCompare";
             this.Text = "FileCompare";
+            this.Load += new System.EventHandler(this.FileCompare_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

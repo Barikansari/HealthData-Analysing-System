@@ -41,6 +41,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(720, 343);
             this.dataGridView2.TabIndex = 12;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // label1
             // 
@@ -70,6 +71,7 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "IntervalDetectionForm";
             this.Text = "IntervalDetectionForm";
+            this.Load += new System.EventHandler(this.IntervalDetectionForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

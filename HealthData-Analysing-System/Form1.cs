@@ -22,7 +22,7 @@ namespace HealthData_Analysing_System
         private string endTime;
         private List<int> smode = new List<int>();
         private FileConvertor c = new FileConvertor();
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace HealthData_Analysing_System
             dataGridView2.MultiSelect = true;
         }
 
-       
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -108,27 +108,27 @@ namespace HealthData_Analysing_System
             }
         }
 
-      /*  private string ConvertToDate(string date)
-        {
-            string year = "";
-            string month = "";
-            string day = "";
-            for (int i = 0; i < 4; i++)
-            {
-                year = year + date[i];
-            };
-            for (int i = 4; i < 6; i++)
-            {
-                month = month + date[i];
-            };
-            for (int i = 6; i < 8; i++)
-            {
-                day = day + date[i];
-            };
-            string convertedDate = year + "-" + month + "-" + day;
-            return convertedDate;
-        }
-        */
+        /*  private string ConvertToDate(string date)
+          {
+              string year = "";
+              string month = "";
+              string day = "";
+              for (int i = 0; i < 4; i++)
+              {
+                  year = year + date[i];
+              };
+              for (int i = 4; i < 6; i++)
+              {
+                  month = month + date[i];
+              };
+              for (int i = 6; i < 8; i++)
+              {
+                  day = day + date[i];
+              };
+              string convertedDate = year + "-" + month + "-" + day;
+              return convertedDate;
+          }
+          */
         private void InitGrid()
         {
             dataGridView2.ColumnCount = 6;
@@ -221,21 +221,21 @@ namespace HealthData_Analysing_System
                         string temp = (Convert.ToDouble(_hrData["speed"][i]) / 1.60934).ToString();
                         data.Add(temp);
                     }
-                        _hrData["speed"] = data;
-                        dataGridView2.Rows.Clear();
+                    _hrData["speed"] = data;
+                    dataGridView2.Rows.Clear();
                     DateTime dateTime = DateTime.Parse(_param["StartTime"]);
                     for (int i = 0; i < _hrData["cadence"].Count; i++)
-                        {
-                       if (i > 0) dateTime = dateTime.AddSeconds(Convert.ToInt32(_param["Interval"]));
+                    {
+                        if (i > 0) dateTime = dateTime.AddSeconds(Convert.ToInt32(_param["Interval"]));
                         string[] hrData = new string[] { _hrData["cadence"][i], _hrData["altitude"][i], _hrData["heartRate"][i],
                             _hrData["watt"][i], _hrData["speed"][i], dateTime.TimeOfDay.ToString() };
                         dataGridView2.Rows.Add(hrData);
-                        }
                     }
                 }
             }
+        }
 
-  
+
 
         private void perMileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -337,9 +337,9 @@ namespace HealthData_Analysing_System
 
         }
 
-       
 
-        
+
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -426,9 +426,9 @@ namespace HealthData_Analysing_System
 
         }
 
-    
 
-    private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedIndex = comboBox1.SelectedIndex + 1;
 
@@ -441,4 +441,37 @@ namespace HealthData_Analysing_System
             var data = new TableFiller().FillDataInSumaryTable(b, "19:12:15", null);
             dataGridView3.Rows.Add(data);
         }
-    } }
+
+        private void dataGridView2_RowStateChanged_1(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            try
+            {
+                if (e.StateChanged != DataGridViewElementStates.Selected) return;
+                int index = Convert.ToInt32(e.Row.Index.ToString());
+
+                //_hrData.Add("cadence", new List());
+                string cadence = dataGridView2.Rows[index].Cells[0].Value.ToString();
+                listCadence.Add(cadence);
+
+                string altitude = dataGridView2.Rows[index].Cells[1].Value.ToString();
+                listAltitude.Add(altitude);
+
+                string heartRate = dataGridView2.Rows[index].Cells[2].Value.ToString();
+                listHeartRate.Add(heartRate);
+
+                string power = dataGridView2.Rows[index].Cells[3].Value.ToString();
+                listPower.Add(power);
+
+                string speed = dataGridView2.Rows[index].Cells[4].Value.ToString();
+                listSpeed.Add(speed);
+
+                string time = dataGridView2.Rows[index].Cells[5].Value.ToString();
+                listTime.Add(time);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+    }
+}

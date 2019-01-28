@@ -151,5 +151,10 @@ namespace HealthData_Analysing_System
         {
 
         }
+
+        private void FileCompare_Load_1(object sender, EventArgs e)
+        {
+            InitGrid();
+        }
     }
 }
